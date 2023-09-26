@@ -23,3 +23,32 @@ export interface ScreenOptionsProps {
     height: number;
   };
 }
+
+export interface ProductProps {
+  id: string;
+  name: string;
+  url: string;
+  price: string;
+  description: string;
+  ingredients: string;
+  nutritionalInformation: {
+    name: string;
+    details: {
+      name: string;
+      value: string;
+    }[];
+  };
+  info: string;
+  prepare: string[];
+  dietaryInformation: string[];
+  storageInformation: string;
+  extra: string[];
+}
+
+export interface SingleProps {
+  dataObj: ProductProps;
+}
+
+export interface HeaderProps {
+  onSearch: (value: string) => void;
+}
