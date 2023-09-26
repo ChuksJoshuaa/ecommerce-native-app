@@ -2,6 +2,7 @@ import { useState } from "react";
 import { ScrollView, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Header, Products } from "../components";
+import { getLowerCase } from "../utils/conversions";
 import { products } from "../utils/products";
 import { SIZES } from "../constants";
 
@@ -11,10 +12,11 @@ const Home = () => {
   const handleSearch = (value: string) => {
     if (!value.length) return setProductsData(products);
 
-    const formattedValue = value.toLowerCase().replace(/[^a-z0-9]/g, "");
+    const formattedValue = getLowerCase(value);
     const filteredData = products.filter((item) => {
-      const formattedName = item.name.toLowerCase().replace(/[^a-z0-9]/g, "");
-      return formattedName.includes(formattedValue);
+      const formattedName = getLowerCase(item.name);
+      if (formattedName)
+        return formattedName.includes(formattedValue as string);
     });
 
     if (filteredData.length > 0) setProductsData(filteredData);

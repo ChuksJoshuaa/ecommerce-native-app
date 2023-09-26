@@ -1,8 +1,7 @@
 import { Ionicons, SimpleLineIcons } from "@expo/vector-icons";
 import { Image, Text, TouchableOpacity, View } from "react-native";
 import { NavigationProps, SingleProps } from "../utils/interface";
-import { formatName } from "../utils/products";
-import { SIZES } from "../constants";
+import { formatName } from "../utils/conversions";
 import { useNavigation } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 

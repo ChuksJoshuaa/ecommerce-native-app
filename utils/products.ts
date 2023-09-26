@@ -1,17 +1,5 @@
 export const getUniqueID = () => Math.floor(Math.random() * 1000000000);
 
-export function toCamelCase(name: string) {
-  return name.replace(/[-_](.)/g, (_, char) => char.toUpperCase());
-}
-
-export function formatName(name: string) {
-  if (name.length > 12) {
-    return name.slice(0, 12) + "...";
-  } else {
-    return name;
-  }
-}
-
 export const products = [
   {
     id: getUniqueID().toString(),
