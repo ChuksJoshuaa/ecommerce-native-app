@@ -1,14 +1,16 @@
+import {
+  AntDesign,
+  MaterialCommunityIcons,
+  SimpleLineIcons,
+} from "@expo/vector-icons";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { Home, Cart } from "../screens";
-import { SimpleLineIcons } from "@expo/vector-icons";
-import { Feather } from "@expo/vector-icons";
-import { COLORS, SIZES } from "../constants";
-import { NavigationProps, ScreenOptionsProps } from "../utils/interface";
-import { AntDesign } from "@expo/vector-icons";
 import { Image, Text } from "react-native";
-const Tab = createBottomTabNavigator<NavigationProps>();
-import { logo } from "../utils/profileIcon";
+import { COLORS, SIZES } from "../constants";
+import { Cart, Home } from "../screens";
 import { checkImageURL } from "../utils/imageCheck";
+import { NavigationProps, ScreenOptionsProps } from "../utils/interface";
+import { logo } from "../utils/profileIcon";
+const Tab = createBottomTabNavigator<NavigationProps>();
 
 const screenOptions = {
   tabBarShowLabel: true,
@@ -67,8 +69,8 @@ const BottomTabNavigation = () => {
           },
           tabBarIcon: ({ focused }) => {
             return (
-              <Feather
-                name="menu"
+              <MaterialCommunityIcons
+                name="vector-square"
                 size={24}
                 color={focused ? COLORS.crimson : COLORS.silver}
               />
