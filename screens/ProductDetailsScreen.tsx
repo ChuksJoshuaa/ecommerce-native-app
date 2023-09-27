@@ -72,7 +72,7 @@ const ProductDetails = () => {
 
   if (loading) {
     return (
-      <View className="absolute top-[50%] left-[40%] flex items-center justify-center">
+      <View className="flex-1 items-center justify-center">
         <Text
           className="font-medium leading-normal tracking-wider text-[16px] text-[#151515]"
           style={{ fontFamily: FONTS.medium }}
@@ -84,14 +84,16 @@ const ProductDetails = () => {
   }
 
   if (!loading && Object.keys(singleData).length === 0) {
-    <View className="absolute top-[50%] left-[40%] flex items-center justify-center">
-      <Text
-        className="font-medium leading-normal tracking-wider text-[16px] text-[#151515]"
-        style={{ fontFamily: FONTS.medium }}
-      >
-        Product not found!!!
-      </Text>
-    </View>;
+    return (
+      <View className="flex-1 items-center justify-center">
+        <Text
+          className="font-medium leading-normal tracking-wider text-[16px] text-[#151515]"
+          style={{ fontFamily: FONTS.medium }}
+        >
+          Product not found!!!
+        </Text>
+      </View>
+    );
   }
   return (
     <SafeAreaView className="flex-1 relative bg-[#F9F9F9]">
