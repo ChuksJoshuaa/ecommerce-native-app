@@ -3,7 +3,9 @@ export type NavigationProps = {
   Cart: undefined;
   Menu: undefined;
   Account: undefined;
-  ProductDetails: undefined;
+  ProductDetails: {
+    id: string;
+  };
   Bottom: undefined;
 };
 
@@ -51,4 +53,8 @@ export interface SingleProps {
 
 export interface HeaderProps {
   onSearch: (value: string) => void;
+}
+
+export interface RouteParams {
+  id: string; // or number, depending on what type your id is
 }

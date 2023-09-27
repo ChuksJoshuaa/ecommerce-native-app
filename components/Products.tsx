@@ -4,6 +4,7 @@ import { NavigationProps, SingleProps } from "../utils/interface";
 import { formatName } from "../utils/conversions";
 import { useNavigation } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
+import { FONTS } from "../constants";
 
 type NavigationIProps = NativeStackNavigationProp<NavigationProps, "Cart">;
 type NavigationDetailsProps = NativeStackNavigationProp<
@@ -22,8 +23,10 @@ const Products = ({ dataObj }: SingleProps) => {
         </View>
 
         <TouchableOpacity
-          className="flex justify-center items-center"
-          onPress={() => navigation.navigate("ProductDetails")}
+          className="flex justify-center items-center cursor-pointer"
+          onPress={() =>
+            navigation.navigate("ProductDetails", { id: dataObj.id })
+          }
         >
           <Image
             source={{
@@ -37,13 +40,21 @@ const Products = ({ dataObj }: SingleProps) => {
           />
         </TouchableOpacity>
         <TouchableOpacity
-          className="flex flex-row justify-between items-center px-2 py-3"
-          onPress={() => navigation.navigate("ProductDetails")}
+          className="flex flex-row justify-between items-center px-2 py-3 cursor-pointer"
+          onPress={() =>
+            navigation.navigate("ProductDetails", { id: dataObj.id })
+          }
         >
-          <Text className="font-medium leading-normal tracking-wider text-[14px] text-[#151515]">
+          <Text
+            className="font-medium leading-normal tracking-wider text-[14px] text-[#151515]"
+            style={{ fontFamily: FONTS.medium }}
+          >
             {formatName(dataObj.name)}
           </Text>
-          <Text className="font-medium leading-normal tracking-wider text-[14px] text-[#DB3C25]">
+          <Text
+            className="font-medium leading-normal tracking-wider text-[14px] text-[#DB3C25]"
+            style={{ fontFamily: FONTS.medium }}
+          >
             {dataObj.price}
           </Text>
         </TouchableOpacity>
@@ -53,7 +64,10 @@ const Products = ({ dataObj }: SingleProps) => {
             onPress={() => navigation.navigate("Cart")}
           >
             <SimpleLineIcons name="handbag" size={24} color="white" />
-            <Text className="font-medium leading-normal tracking-wider text-[14px] text-white ml-2">
+            <Text
+              className="font-medium leading-normal tracking-wider text-[14px] text-white ml-2"
+              style={{ fontFamily: FONTS.regular }}
+            >
               Add to cart
             </Text>
           </TouchableOpacity>

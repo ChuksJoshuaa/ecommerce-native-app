@@ -6,10 +6,7 @@ export const products = [
     name: "African Doughnut Mix",
     url: `https://res.cloudinary.com/chuksmbanaso/image/upload/v1695716997/doughnut_nmm7fz.jpg`,
     price: `£30`,
-    description: `Rare Eat Puff Puff Mix can be made into a deep-fried dough. They are made from yeast dough, 
-    shaped into balls and deep-fried until golden brown. It has a doughnut-like texture but slightly chewier.
-    It is a very common snack eaten by so many West African countries but with different names and a little
-    bit of variation in the mode of preparation.`,
+    description: `Rare Eat Puff Puff Mix can be made into a deep-fried dough. They are made from yeast dough, shaped into balls and deep-fried until golden brown. It has a doughnut-like texture but slightly chewier. It is a very common snack eaten by so many West African countries but with different names and a little bit of variation in the mode of preparation.`,
     ingredients: `Wheat Flour, Natural Sugar, Yeast, Salt, Nutmeg`,
     nutritionalInformation: {
       name: `Amount Per serving Size – 100g`,

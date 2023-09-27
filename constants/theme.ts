@@ -54,4 +54,13 @@ const SHADOWS = {
   },
 };
 
-export { COLORS, SIZES, SHADOWS };
+const FONTS = {
+  extrabold: "extrabold",
+  bold: "bold",
+  semibold: "semibold",
+  medium: "medium",
+  regular: "regular",
+  light: "light",
+};
+
+export { COLORS, SIZES, SHADOWS, FONTS };
