@@ -2,7 +2,7 @@
 
 <img src="https://res.cloudinary.com/chuksmbanaso/image/upload/v1695815807/Screenshot_1695814976_djd8xy.png" title="Image" alt="image">
 
-This is a native application built for ecommerce purposes. It allows users to browse products, add them to cart, and proceed to checkout.
+This is a native application built for ecommerce purposes. It allows users to browse products, add them to cart, and proceed to checkout..
 
 Features include:
 
